@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="over">
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let entry of entries"
+         [routerLink]="entry.path"
+         routerLinkActive #rla="routerLinkActive"
+         [class.nav-selected]="rla.isActive"
+         (click)="sidenav.toggle()">
+        {{entry.title}}
+      </a>
+    </mat-nav-list>       
+  </mat-sidenav>    
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+        <button mat-icon-button disableRipple (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <a class="header" routerLink="/">SHOP!</a>
+        <span class="spacer"></span>
+        <app-cart-icon></app-cart-icon>
+    </mat-toolbar>
+    <div style="opacity: 0; height: 64px"></div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

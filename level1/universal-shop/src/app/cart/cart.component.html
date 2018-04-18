@@ -1,0 +1,15 @@
+<h2 class="header">Your Cart</h2>
+<div *ngIf="count == 1" class="header sub">(1 item)</div>
+<div *ngIf="count > 1" class="header sub">({{count}} items)</div>
+<div *ngIf="count == 0" class="header sub">(Your cart is empty)</div>
+
+<div class="header">
+  <div *ngFor="let entry of entries" class="row">
+    <img class="row-item" [src]="entry.item.image">
+    <div class="row-item title">{{entry.item.title}}</div>
+    <div class="row-item sub">Qty: {{entry.count}}</div>
+    <div class="row-item sub price">${{(entry.count * entry.item.price).toFixed(2)}}</div>
+    <a class="delete" (click)="delete(entry)"><mat-icon>close</mat-icon></a>
+  </div>
+</div>
+<div *ngIf="count > 0" class="total">Total: ${{getTotal()}}</div>

@@ -1,0 +1,18 @@
+<h2 class="header">{{title}}</h2>
+<div *ngIf="response" class="header sub">({{response.length}} items)</div>
+
+<div class="header">
+  <mat-card *ngFor="let entry of response" class="dept-card centered">
+    <img class="fade" [src]="entry.image" [alt]="entry.title" width="100%">
+    <div style="font-weight: bold">{{truncate(entry.title)}}</div>
+    <div class="sub">${{entry.price.toFixed(2)}}</div>
+    <div>
+      <button mat-button
+              class="centered"
+              color="primary"
+              (click)="addToCart(entry)">
+        ADD TO CART
+      </button>
+    </div>  
+  </mat-card>
+</div>
