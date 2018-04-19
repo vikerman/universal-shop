@@ -1,0 +1,13 @@
+.section {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-header {
+  height: 320px;
+}
