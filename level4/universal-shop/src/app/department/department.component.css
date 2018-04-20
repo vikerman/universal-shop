@@ -1,0 +1,37 @@
+.header {
+  text-align: center;
+  padding-left: 25px;
+  margin-bottom: 0px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.sub {
+  color: grey;
+}
+
+mat-card {
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  margin: 24px;
+}
+
+:host {
+  margin: auto;
+}
+
+mat-card-title {
+  font-weight: bold;
+}
+
+.add {
+  margin-top: 10px;
+}
+
+.placeholder {
+  width: 200px;
+  height: 200px;
+}

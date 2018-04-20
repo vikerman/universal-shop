@@ -1,0 +1,7 @@
+<div *ngFor = "let entry of entries" class="section">
+  <img id="img" [alt]="entry.title" [src]="entry.image" class="center img-header">
+  <h2 style="text-align: center">{{entry.title}}</h2>
+  <div style="text-align: center">
+    <button mat-raised-button color="primary" [routerLink]="entry.path">SHOP NOW</button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<h2 class="header">{{title}}</h2>
+<div *ngIf="response" class="header sub">({{response.length}} items)</div>
+
+<div class="header">
+  <mat-card *ngFor="let entry of response" class="dept-card centered">
+    <div class="placeholder">
+      <lazy-img [attr.src]="entry.image" [attr.alt]="entry.title"></lazy-img>
+    </div>
+    <div style="font-weight: bold">{{truncate(entry.title)}}</div>
+    <div class="sub">${{entry.price.toFixed(2)}}</div>
+    <mat-card-footer>
+      <div class="add">
+        <button mat-raised-button
+                class="centered"
+                color="primary"
+                (click)="addToCart(entry)">
+          ADD TO CART
+        </button>
+      </div>
+    </mat-card-footer>  
+  </mat-card>
+</div>
