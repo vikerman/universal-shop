@@ -10,12 +10,17 @@
     <div class="sub">${{entry.price.toFixed(2)}}</div>
     <mat-card-footer>
       <div class="add">
-        <button mat-raised-button
-                class="centered"
-                color="primary"
-                (click)="addToCart(entry)">
+        <add-to-cart [attr.name]="entry.name"
+                     [attr.image]="entry.image"
+                     [attr.title]="entry.title"
+                     [attr.price]="entry.price.toFixed(2)">
+          <button mat-raised-button
+            class="centered"
+            color="primary"
+            (click)="addToCart(entry)">
           ADD TO CART
-        </button>
+          </button>
+        </add-to-cart>
       </div>
     </mat-card-footer>  
   </mat-card>

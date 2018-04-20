@@ -1,5 +1,4 @@
 import {Component, Input, ElementRef} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
 
 let observer: IntersectionObserver|null = null;
 

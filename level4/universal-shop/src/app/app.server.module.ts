@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import { ShoppingCartService, CartEntry } from './shopping-cart.service';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { Item } from './item';
+import { BrowserModule } from '@angular/platform-browser';
 
 export class MockShoppingCartService {
   onChanged: Subject<number> = new BehaviorSubject<number>(0);
@@ -27,6 +28,7 @@ export function getBaseHttpUrl() {
     // The AppServerModule should import your AppModule followed
     // by the ServerModule from @angular/platform-server.
     AppModule,
+    BrowserModule.withServerTransition({appId: 'app'}),
     ServerModule,
     ServerTransferStateModule,
     ModuleMapLoaderModule // <-- *Important* to have lazy-loaded routes work

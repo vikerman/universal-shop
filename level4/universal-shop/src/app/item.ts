@@ -4,9 +4,9 @@
 export interface Item {
   name: string;
   title: string;
-  category: string;
   price: number;
-  description: string;
   image: string;
-  largeImage: string;
+  category?: string;
+  description?: string;
+  largeImage?: string;
 }

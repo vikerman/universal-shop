@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'cart',
@@ -28,10 +28,18 @@ const routes: Routes = [
     loadChildren: './department/department.module#DepartmentModule',
     data: { title: 'Ladies T-Shirts', url: '/assets/json/ladies_tshirts.json' }
   },
-  // HACK HACK : Get CLI to recognize LazyImageModule for building.
+  // HACK HACK : Get CLI to recognize Lazy Angular Elements Modules for building.
   {
     path: '__dont_go_here_1',
     loadChildren: './lazy-img/lazy-img.module#LazyImageModule',
+  },
+  {
+    path: '__dont_go_here_2',
+    loadChildren: './add-to-cart/add-to-cart.module#AddToCartModule',
+  },
+  {
+    path: '__dont_go_here_3',
+    loadChildren: './app.module#AppModule',
   },
 ];
 
