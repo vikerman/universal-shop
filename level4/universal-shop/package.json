@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "build:client-and-server-bundles": "ng build --prod && ng run universal-shop:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server && ./fix.sh",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "serve:ssr": "node dist/server"
   },
   "private": true,

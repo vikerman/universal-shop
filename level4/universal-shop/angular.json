@@ -33,7 +33,12 @@
                 "input": "src/styles.scss"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "lazyModules": [
+              "src/app/lazy-img/lazy-img.module",
+              "src/app/add-to-cart/add-to-cart.module",
+              "src/app/app.module"
+            ]
           },
           "configurations": {
             "production": {
