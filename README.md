@@ -1,6 +1,6 @@
 # universal-shop
 
-An example repo to compare different stratgies.
+An example repo to compare different Angular SSR stratgies.
 
 1. [level1](https://github.com/vikerman/universal-shop/tree/master/level1/universal-shop) - Pure client-side rendered app.
 
